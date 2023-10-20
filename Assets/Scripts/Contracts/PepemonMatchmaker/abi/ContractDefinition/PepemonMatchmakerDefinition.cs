@@ -44,6 +44,15 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
         public virtual string Account { get; set; }
     }
 
+    public partial class AddPveDeckFunction : AddPveDeckFunctionBase { }
+
+    [Function("addPveDeck")]
+    public class AddPveDeckFunctionBase : FunctionMessage
+    {
+        [Parameter("uint256", "deckId", 1)]
+        public virtual BigInteger DeckId { get; set; }
+    }
+
     public partial class DeckOwnerFunction : DeckOwnerFunctionBase { }
 
     [Function("deckOwner", "address")]
@@ -57,6 +66,15 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
 
     [Function("enter")]
     public class EnterFunctionBase : FunctionMessage
+    {
+        [Parameter("uint256", "deckId", 1)]
+        public virtual BigInteger DeckId { get; set; }
+    }
+
+    public partial class EnterPveFunction : EnterPveFunctionBase { }
+
+    [Function("enterPve")]
+    public class EnterPveFunctionBase : FunctionMessage
     {
         [Parameter("uint256", "deckId", 1)]
         public virtual BigInteger DeckId { get; set; }
@@ -117,6 +135,14 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
     {
         [Parameter("address", "account", 1)]
         public virtual string Account { get; set; }
+    }
+
+    public partial class IsPveModeFunction : IsPveModeFunctionBase { }
+
+    [Function("isPveMode", "bool")]
+    public class IsPveModeFunctionBase : FunctionMessage
+    {
+
     }
 
     public partial class LeaderboardPlayersFunction : LeaderboardPlayersFunctionBase { }
@@ -194,6 +220,15 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
         public virtual string ReturnValue1 { get; set; }
     }
 
+    public partial class RemovePveDeckFunction : RemovePveDeckFunctionBase { }
+
+    [Function("removePveDeck")]
+    public class RemovePveDeckFunctionBase : FunctionMessage
+    {
+        [Parameter("uint256", "deckId", 1)]
+        public virtual BigInteger DeckId { get; set; }
+    }
+
     public partial class RenounceAdminFunction : RenounceAdminFunctionBase { }
 
     [Function("renounceAdmin")]
@@ -247,6 +282,15 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
         public virtual BigInteger MatchRange { get; set; }
         [Parameter("uint256", "matchRangePerMinute", 2)]
         public virtual BigInteger MatchRangePerMinute { get; set; }
+    }
+
+    public partial class SetPveModeFunction : SetPveModeFunctionBase { }
+
+    [Function("setPveMode")]
+    public class SetPveModeFunctionBase : FunctionMessage
+    {
+        [Parameter("bool", "enable", 1)]
+        public virtual bool Enable { get; set; }
     }
 
     public partial class SetRewardPoolAddressFunction : SetRewardPoolAddressFunctionBase { }
@@ -354,7 +398,16 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
     public partial class IsAdminOutputDTO : IsAdminOutputDTOBase { }
 
     [FunctionOutput]
-    public class IsAdminOutputDTOBase : IFunctionOutputDTO
+    public class IsAdminOutputDTOBase : IFunctionOutputDTO 
+    {
+        [Parameter("bool", "", 1)]
+        public virtual bool ReturnValue1 { get; set; }
+    }
+
+    public partial class IsPveModeOutputDTO : IsPveModeOutputDTOBase { }
+
+    [FunctionOutput]
+    public class IsPveModeOutputDTOBase : IFunctionOutputDTO 
     {
         [Parameter("bool", "", 1)]
         public virtual bool ReturnValue1 { get; set; }
@@ -387,7 +440,7 @@ namespace Contracts.PepemonMatchmaker.abi.ContractDefinition
     public partial class PlayerRankingOutputDTO : PlayerRankingOutputDTOBase { }
 
     [FunctionOutput]
-    public class PlayerRankingOutputDTOBase : IFunctionOutputDTO
+    public class PlayerRankingOutputDTOBase : IFunctionOutputDTO 
     {
         [Parameter("uint256", "", 1)]
         public virtual BigInteger ReturnValue1 { get; set; }

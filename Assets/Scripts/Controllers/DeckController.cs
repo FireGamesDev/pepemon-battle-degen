@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
@@ -68,6 +69,6 @@ public class DeckController : MonoBehaviour
         // TODO: Use on-chain MAX_SUPPORT_CARDS value
         _deckName.text = (metadata?.name ?? "New") + " Deck";
         _battleCard.text = metadata?.name ?? "None";
-        _supportCardCount.text = (supportCards.Values?.Count ?? 0) + " / " + 60;
+        _supportCardCount.text = supportCards.Sum(card => card.Value) + " / " + 60;
     }
 }

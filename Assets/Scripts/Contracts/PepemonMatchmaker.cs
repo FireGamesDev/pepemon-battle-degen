@@ -104,6 +104,17 @@ public class PepemonMatchmaker
             Addresses[(int)league]);
     }
 
+    public static async Task EnterPve(PepemonLeagues league, ulong deckId)
+    {
+        var request = Web3Controller.instance.GetContractTransactionUnityRequest();
+        await request.SendTransactionAndWaitForReceiptAsync(
+            new EnterPveFunction()
+            {
+                DeckId = deckId,
+            },
+            Addresses[(int)league]);
+    }
+
     public static async Task Exit(PepemonLeagues league, ulong deckId)
     {
         var request = Web3Controller.instance.GetContractTransactionUnityRequest();

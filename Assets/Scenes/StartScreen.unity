@@ -375,7 +375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -734.9794}
+  m_AnchoredPosition: {x: 960, y: -925.0166}
   m_SizeDelta: {x: 1000, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87644891
@@ -2476,7 +2476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 320, y: -684.9794}
+  m_AnchoredPosition: {x: 320, y: -875.0166}
   m_SizeDelta: {x: 640, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630232705
@@ -3489,7 +3489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -284.97937}
+  m_AnchoredPosition: {x: 960, y: -475.0166}
   m_SizeDelta: {x: 1000, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781226658
@@ -4413,7 +4413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -884.9794}
+  m_AnchoredPosition: {x: 960, y: -1075.0166}
   m_SizeDelta: {x: 1000, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969319545
@@ -4683,7 +4683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rice League
+  m_text: Rice League (PvE)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bfa113c19e50f14981b514906a2f76f, type: 2}
   m_sharedMaterial: {fileID: 4582639141343757650, guid: 8bfa113c19e50f14981b514906a2f76f, type: 2}
@@ -4710,7 +4710,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.9
+  m_fontSize: 68.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7540,7 +7540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1600, y: -684.9794}
+  m_AnchoredPosition: {x: 1600, y: -875.0166}
   m_SizeDelta: {x: 640, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319189953
@@ -7753,8 +7753,8 @@ MonoBehaviour:
       pepemonFactoryAddress: 0x9460DfaAD34Bc55ee564A6851c58DFC390D7d4ac
       pepemonCardDeckAddress: 0x12EaA00470d8160DC43C11c32fD8c30E5fca0C05
       pepemonMatchmakerAddresses:
-      - 0x6f2D7Ad24d1B17Cc56f8a43dBB9309ea227724A4
-      - 0x6f2D7Ad24d1B17Cc56f8a43dBB9309ea227724A4
+      - 0x80a8858e9e46855b6D3e05767072a86daF881d9F
+      - 0x80a8858e9e46855b6D3e05767072a86daF881d9F
       - 0x6f2D7Ad24d1B17Cc56f8a43dBB9309ea227724A4
     - chainId: 250
       chainName: Fantom Opera
@@ -7784,10 +7784,10 @@ MonoBehaviour:
       - 0x5db8ec7d98b1357Ade226E01aD5032fb44b5994D
       - 0x5db8ec7d98b1357Ade226E01aD5032fb44b5994D
       - 0x5db8ec7d98b1357Ade226E01aD5032fb44b5994D
-    defaultChainId: 906090
-    debugRpcUrl: https://l2-pepechain-testnet-8uk55qlld4.t.conduit.xyz
+    defaultChainId: 4002
+    debugRpcUrl: https://rpc.ankr.com/fantom_testnet
     debugPrivateKey: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-    readOnlyRpcUrl: https://l2-pepechain-testnet-8uk55qlld4.t.conduit.xyz
+    readOnlyRpcUrl: https://rpc.ankr.com/fantom_testnet
   onWalletConnected:
     m_PersistentCalls:
       m_Calls:
@@ -8215,7 +8215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -434.97937}
+  m_AnchoredPosition: {x: 960, y: -625.0166}
   m_SizeDelta: {x: 1000, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379687548
@@ -8341,7 +8341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -684.9794}
+  m_AnchoredPosition: {x: 960, y: -875.0166}
   m_SizeDelta: {x: 640, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379819351
@@ -9196,8 +9196,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -535.2765}
-  m_SizeDelta: {x: 1880, y: 670.553}
+  m_AnchoredPosition: {x: 960, y: -775.0166}
+  m_SizeDelta: {x: 1880, y: 1150.0332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443053469
 MonoBehaviour:
@@ -9542,7 +9542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -584.9794}
+  m_AnchoredPosition: {x: 960, y: -775.0166}
   m_SizeDelta: {x: 1000, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515001109

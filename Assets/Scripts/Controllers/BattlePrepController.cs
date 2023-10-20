@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
 using Nethereum.RPC.Eth.DTOs;
 using Sirenix.OdinInspector;
@@ -41,6 +42,22 @@ public class BattlePrepController : MonoBehaviour
         selectedDeck = deckId;
     }
 
+    // Choose between entering in PvP or PvE mode.
+    // Rice league is always PvE, while the others are PvP
+    private async UniTask EnterMatchmaker()
+    {
+        if (selectedLeague == PepemonMatchmaker.PepemonLeagues.Rice)
+        {
+            Debug.Log("Entering the matchmaker in PvE mode");
+            await PepemonMatchmaker.EnterPve(selectedLeague, selectedDeck);
+        }
+        else
+        {
+            Debug.Log("Entering the matchmaker in PvP mode");
+            await PepemonMatchmaker.Enter(selectedLeague, selectedDeck);
+        }
+    }
+
     private async void OnSearchForOpponentButtonClick()
     {
         // SetApprovalForAll for CardDeck
@@ -57,8 +74,7 @@ public class BattlePrepController : MonoBehaviour
         bool failedToEnter = false;
         try
         {
-            Debug.Log("Entering the matchmaker");
-            await PepemonMatchmaker.Enter(selectedLeague, selectedDeck);
+            await EnterMatchmaker();
         }
         catch (Exception e)
         {
